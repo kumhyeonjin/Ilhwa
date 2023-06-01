@@ -6,7 +6,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 import SignInPage from "../pages/SignInPage";
 import SignUpPage from "../pages/SignUpPage";
 import SearchDetail from "../pages/SearchDetail";
-import HomeDetail from "../pages/HomeDetail";
+import RoomDetail from "../pages/RoomDetail";
+import ShopDetail from "../pages/ShopDetail";
+import TrafficDetail from "../pages/TrafficDetail";
+import EatDetail from "../pages/EatDetail";
+import MyProfile from "../pages/MyProfile";
 import TabNavigator from "./TabNavigator";
 
 const Stack = createStackNavigator();
@@ -18,13 +22,17 @@ const StackNavigator = () => {
         //   height:50,
         // },
         // 헤더 숨기기
-        headerShown: true,
+        headerShown: false,
       }}
     >
       <Stack.Screen name="SignInPage" component={SignInPage} />
       <Stack.Screen name="SignUpPage" component={SignUpPage} />
       <Stack.Screen name="SearchDetail" component={SearchDetail} />
-      <Stack.Screen name="HomeDetail" component={HomeDetail} />
+      <Stack.Screen name="RoomDetail" component={RoomDetail} />
+      <Stack.Screen name="ShopDetail" component={ShopDetail} />
+      <Stack.Screen name="TrafficDetail" component={TrafficDetail} />
+      <Stack.Screen name="EatDetail" component={EatDetail} />
+      <Stack.Screen name="MyProfile" component={MyProfile} />
       <Stack.Screen name="TabNavigator" component={TabNavigator} />
     </Stack.Navigator>
   );

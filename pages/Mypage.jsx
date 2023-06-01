@@ -6,9 +6,13 @@ import { LinearGradient } from "expo-linear-gradient";
 //
 import { AntDesign } from "@expo/vector-icons";
 //
-export default function MyPage() {
+export default function MyPage({ navigation }) {
+  const goMyProfile = () => {
+    navigation.navigate("MyProfile", {});
+  };
   return (
     <View style={styles.mypageAll}>
+      <Box safeAreaTop />
       <LinearGradient
         colors={["#FFBBB7", "#9EBEF9"]}
         start={{ x: 0, y: 1 }}
@@ -51,7 +55,7 @@ export default function MyPage() {
       </View>
       <View style={styles.goProfile}>
         <Text style={styles.myText}>내 프로필</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={goMyProfile}>
           <AntDesign name="rightcircleo" size={24} color="#B8CFF9" />
         </TouchableOpacity>
       </View>

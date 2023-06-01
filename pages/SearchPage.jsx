@@ -17,70 +17,73 @@ export default function StudyPage({ navigation }) {
   //
 
   return (
-    <Box style={styles.searchAll}>
-      <View style={styles.searchContainer}>
-        <TextInput
-          style={styles.stextInput}
-          placeholder="검색어를 입력하세요"
-        />
-        <TouchableOpacity onPress={goSearchDetail}>
-          <Icon name="search" size={20} color="#FE9E98" />
-        </TouchableOpacity>
-      </View>
-      <View style={styles.searchEx}>
-        <Text style={styles.searchExTitle}>이렇게 검색해 보세요!</Text>
-        <View style={styles.keyword}>
-          <LinearGradient
-            colors={["#DEE9FD", "#FED2CF"]}
-            start={{ x: 1, y: 1 }}
-            end={{ x: 0, y: 0 }}
-            style={styles.keywordBox}
-          >
-            <Text style={styles.keywordText}>키워드1</Text>
-          </LinearGradient>
+    <>
+      <Box safeAreaTop />
+      <Box style={styles.searchAll}>
+        <View style={styles.searchContainer}>
+          <TextInput
+            style={styles.stextInput}
+            placeholder="검색어를 입력하세요"
+          />
+          <TouchableOpacity onPress={goSearchDetail}>
+            <Icon name="search" size={20} color="#FE9E98" />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.searchEx}>
+          <Text style={styles.searchExTitle}>이렇게 검색해 보세요!</Text>
+          <View style={styles.keyword}>
+            <LinearGradient
+              colors={["#DEE9FD", "#FED2CF"]}
+              start={{ x: 1, y: 1 }}
+              end={{ x: 0, y: 0 }}
+              style={styles.keywordBox}
+            >
+              <Text style={styles.keywordText}>키워드1</Text>
+            </LinearGradient>
+            <LinearGradient
+              colors={["#FED2CF", "#DEE9FD"]}
+              start={{ x: 1, y: 0 }}
+              end={{ x: 0, y: 0 }}
+              style={styles.keywordBox}
+            >
+              <Text style={styles.keywordText}>키워드2</Text>
+            </LinearGradient>
+            <LinearGradient
+              colors={["#DEE9FD", "#FED2CF"]}
+              start={{ x: 0, y: 1 }}
+              end={{ x: 1, y: 0 }}
+              style={styles.keywordBox}
+            >
+              <Text style={styles.keywordText}>키워드3</Text>
+            </LinearGradient>
+            <LinearGradient
+              colors={["#DEE9FD", "#FED2CF"]}
+              start={{ x: 1, y: 0 }}
+              end={{ x: 0, y: 1 }}
+              style={styles.keywordBox}
+            >
+              <Text style={styles.keywordText}>키워드4</Text>
+            </LinearGradient>
+            {/* <Text style={styles.keywordText}>키워드4</Text> */}
+          </View>
+        </View>
+        <View style={styles.hotsearch}>
+          <Text style={styles.hotsearchTitle}>인기 검색어</Text>
           <LinearGradient
             colors={["#FED2CF", "#DEE9FD"]}
-            start={{ x: 1, y: 0 }}
-            end={{ x: 0, y: 0 }}
-            style={styles.keywordBox}
+            start={{ x: 1, y: 0.3 }}
+            end={{ x: 0.3, y: 1 }}
+            style={styles.hotsearchListBox}
           >
-            <Text style={styles.keywordText}>키워드2</Text>
+            <Text style={styles.hotsearchList}>1. 리스트</Text>
+            <Text style={styles.hotsearchList}>2. 리스트</Text>
+            <Text style={styles.hotsearchList}>3. 리스트</Text>
+            <Text style={styles.hotsearchList}>4. 리스트</Text>
+            <Text style={styles.hotsearchList}>5. 리스트</Text>
           </LinearGradient>
-          <LinearGradient
-            colors={["#DEE9FD", "#FED2CF"]}
-            start={{ x: 0, y: 1 }}
-            end={{ x: 1, y: 0 }}
-            style={styles.keywordBox}
-          >
-            <Text style={styles.keywordText}>키워드3</Text>
-          </LinearGradient>
-          <LinearGradient
-            colors={["#DEE9FD", "#FED2CF"]}
-            start={{ x: 1, y: 0 }}
-            end={{ x: 0, y: 1 }}
-            style={styles.keywordBox}
-          >
-            <Text style={styles.keywordText}>키워드4</Text>
-          </LinearGradient>
-          {/* <Text style={styles.keywordText}>키워드4</Text> */}
         </View>
-      </View>
-      <View style={styles.hotsearch}>
-        <Text style={styles.hotsearchTitle}>인기 검색어</Text>
-        <LinearGradient
-          colors={["#FED2CF", "#DEE9FD"]}
-          start={{ x: 1, y: 0.3 }}
-          end={{ x: 0.3, y: 1 }}
-          style={styles.hotsearchListBox}
-        >
-          <Text style={styles.hotsearchList}>1. 리스트</Text>
-          <Text style={styles.hotsearchList}>2. 리스트</Text>
-          <Text style={styles.hotsearchList}>3. 리스트</Text>
-          <Text style={styles.hotsearchList}>4. 리스트</Text>
-          <Text style={styles.hotsearchList}>5. 리스트</Text>
-        </LinearGradient>
-      </View>
-    </Box>
+      </Box>
+    </>
   );
 }
 

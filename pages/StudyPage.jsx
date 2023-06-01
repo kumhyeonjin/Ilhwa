@@ -6,6 +6,7 @@ import { AntDesign } from "@expo/vector-icons";
 export default function StudyPage() {
   return (
     <ScrollView>
+      <Box safeAreaTop />
       <LinearGradient
         colors={["#FFF2F2", "#DAE7FE", "#FFE7E7"]}
         locations={[0.2, 0.5, 0.8]}

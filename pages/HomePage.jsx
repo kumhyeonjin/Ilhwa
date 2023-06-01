@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
-import { Box } from "native-base";
+import { Box, HStack } from "native-base";
 import { useEffect } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Grid from "react-native-grid-component";
@@ -9,35 +9,43 @@ import { AntDesign } from "@expo/vector-icons";
 //
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeDetail from "../pages/HomeDetail";
+import RoomDetail from "../pages/RoomDetail";
+import ShopDetail from "../pages/ShopDetail";
 //
 
 export default function HomePage({ navigation }) {
-  const goHomeDetail = () => {
-    navigation.navigate("HomeDetail", {});
+  const goRoomDetail = () => {
+    navigation.navigate("RoomDetail", {});
   };
+  const goShopDetail = () => {
+    navigation.navigate("ShopDetail", {});
+  };
+  const goTrafficDetail = () => {
+    navigation.navigate("TrafficDetail", {});
+  };
+  const goEatDetail = () => {
+    navigation.navigate("EatDetail", {});
+  };
+
   useEffect(() => {
     navigation.setOptions({
-      title: "홈페이지",
+      title: "홈",
+      headerStyle: {
+        backgroundColor: "#fff",
+        height: 85,
+        shadowColor: "transparent",
+        borderBottomWidth: 0.3,
+        borderBottomColor: "#2c2c2c",
+      },
+      headerTintColor: "#000",
+      headerTitleStyle: {
+        fontWeight: "bold",
+      },
+      headerShown: true,
+      headerTitleAlign: "center",
+      // headerBackTitleVisible: false,
     });
   });
-  // useEffect(() => {
-  //   navigation.setOptions({
-  //     title: content.title,
-  //     headerStyle: {
-  //       backgroundColor: 'transparent',
-  //       height: 80,
-  //       // shadowColor: '#fff',
-  //       shadowColor: 'transparent',
-  //     },
-  //     headerTintColor: '#000',
-  //     headerTitleStyle: {
-  //       fontWeight: 'bold',
-  //     },
-  //     headerShown: true,
-  //     // headerBackTitleVisible: false,
-  //   });
-  //  })
   return (
     <ScrollView>
       <View style={styles.home}>
@@ -78,7 +86,7 @@ export default function HomePage({ navigation }) {
             <Text style={styles.hSectionName}>
               Tokyo Inside; 상황별 필수어휘
             </Text>
-            <TouchableOpacity onPress={goHomeDetail}>
+            <TouchableOpacity>
               <Text style={styles.hSection2_allbutton}>
                 전체보기
                 <AntDesign name="right" size={12} color="black" />
@@ -98,40 +106,51 @@ export default function HomePage({ navigation }) {
               // ]}
               style={styles.hSection2Con}
             >
-              <View style={styles.h2ImageCon}>
-                <Image
-                  source={require("../assets/food.png")}
-                  style={styles.h2Image}
-                  resizeMode="cover"
-                />
-                <Text style={styles.h2Text}>외식</Text>
-              </View>
-              <View style={styles.h2ImageCon}>
-                <Image
-                  source={require("../assets/room.png")}
-                  style={styles.h2Image}
-                  resizeMode="cover"
-                />
-                <Text style={styles.h2Text}>숙박</Text>
-              </View>
+              <HStack>
+                <View style={styles.h2ImageCon}>
+                  <TouchableOpacity onPress={goEatDetail}>
+                    <Image
+                      source={require("../assets/food.png")}
+                      style={styles.h2Image}
+                      resizeMode="cover"
+                    />
+                    <Text style={styles.h2Text}>외식</Text>
+                  </TouchableOpacity>
+                </View>
+                <View style={styles.h2ImageCon}>
+                  <TouchableOpacity onPress={goRoomDetail}>
+                    <Image
+                      source={require("../assets/room.png")}
+                      style={styles.h2Image}
+                      resizeMode="cover"
+                    />
+                    <Text style={styles.h2Text}>숙박</Text>
+                  </TouchableOpacity>
+                </View>
+              </HStack>
 
-              <View style={styles.h2ImageCon}>
-                <Image
-                  source={require("../assets/bus.png")}
-                  style={styles.h2Image}
-                  resizeMode="cover"
-                />
-                <Text style={styles.h2Text}>교통</Text>
-              </View>
-
-              <View style={styles.h2ImageCon}>
-                <Image
-                  source={require("../assets/shop.png")}
-                  style={styles.h2Image}
-                  resizeMode="cover"
-                />
-                <Text style={styles.h2Text}>쇼핑</Text>
-              </View>
+              <HStack>
+                <View style={styles.h2ImageCon}>
+                  <TouchableOpacity onPress={goTrafficDetail}>
+                    <Image
+                      source={require("../assets/bus.png")}
+                      style={styles.h2Image}
+                      resizeMode="cover"
+                    />
+                    <Text style={styles.h2Text}>교통</Text>
+                  </TouchableOpacity>
+                </View>
+                <View style={styles.h2ImageCon}>
+                  <TouchableOpacity onPress={goShopDetail}>
+                    <Image
+                      source={require("../assets/shop.png")}
+                      style={styles.h2Image}
+                      resizeMode="cover"
+                    />
+                    <Text style={styles.h2Text}>쇼핑</Text>
+                  </TouchableOpacity>
+                </View>
+              </HStack>
             </View>
           </LinearGradient>
         </Box>
@@ -245,15 +264,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   h2ImageCon: {
-    width: "45%",
+    width: 180,
     height: 150,
     marginBottom: 40,
     borderRadius: 10,
     alignItems: "center",
   },
   h2Image: {
-    width: "90%",
-    height: "100%",
+    width: 160,
+    height: 150,
     // overflow: "hidden",
     borderWidth: 3,
     borderRadius: 30,

@@ -12,7 +12,17 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import { LinearGradient } from "expo-linear-gradient";
 import { AntDesign } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
+import ListComponent from "../components/ListComponent";
+
+import datas from "../data.json";
+import { useState } from "react";
+
 export default function SearchDetail() {
+  // const dt = datas.datas;
+
+  // const firterData = dt.filter((e) => e.category === '')
+  // const [data, setData] = useState([]);
+
   return (
     <View style={styles.searchDetailAll}>
       <View style={styles.searchCon}>
@@ -61,171 +71,11 @@ export default function SearchDetail() {
       </View>
       <ScrollView>
         <View style={styles.ResultElement}>
-          <Box style={styles.vocabularyBox}>
-            <View style={styles.halfbox}>
-              <TouchableOpacity style={styles.playButton}>
-                <AntDesign name="playcircleo" size={28} color="#FE9E98" />
-              </TouchableOpacity>
-              <Text
-                style={styles.koreanText}
-                numberOfLines={3}
-                ellipsizeMode="tail"
-              >
-                안녕하세요!
-              </Text>
-            </View>
-            <View style={styles.halfbox2}>
-              <Text
-                style={styles.japanesText}
-                numberOfLines={2}
-                ellipsizeMode="tail"
-              >
-                こんにちは
-              </Text>
-              <Text
-                style={styles.koreanPronunce}
-                numberOfLines={3}
-                ellipsizeMode="tail"
-              >
-                콘니치와!
-              </Text>
-            </View>
-            <TouchableOpacity style={styles.heartButton}>
-              <AntDesign name="hearto" size={20} color="#FE9E98" />
-            </TouchableOpacity>
-          </Box>
-          <Box style={styles.vocabularyBox}>
-            <View style={styles.halfbox}>
-              <TouchableOpacity style={styles.playButton}>
-                <AntDesign name="playcircleo" size={28} color="#FE9E98" />
-              </TouchableOpacity>
-              <Text
-                style={styles.koreanText}
-                numberOfLines={3}
-                ellipsizeMode="tail"
-              >
-                일찍 체크인 할 수 있나요?
-              </Text>
-            </View>
-            <View style={styles.halfbox2}>
-              <Text
-                style={styles.japanesText}
-                numberOfLines={2}
-                ellipsizeMode="tail"
-              >
-                早めにチェックインできますか？
-              </Text>
-              <Text
-                style={styles.koreanPronunce}
-                numberOfLines={3}
-                ellipsizeMode="tail"
-              >
-                하야메니 체쯔쿠인데키마스카?
-              </Text>
-            </View>
-            <TouchableOpacity style={styles.heartButton}>
-              <AntDesign name="hearto" size={20} color="#FE9E98" />
-            </TouchableOpacity>
-          </Box>
-          <Box style={styles.vocabularyBox}>
-            <View style={styles.halfbox}>
-              <TouchableOpacity style={styles.playButton}>
-                <AntDesign name="playcircleo" size={28} color="#FE9E98" />
-              </TouchableOpacity>
-              <Text
-                style={styles.koreanText}
-                numberOfLines={3}
-                ellipsizeMode="tail"
-              >
-                이 물건 환불 가능한가요? 안 된다면 교환 가능할까요?
-              </Text>
-            </View>
-            <View style={styles.halfbox2}>
-              <Text
-                style={styles.japanesText}
-                numberOfLines={2}
-                ellipsizeMode="tail"
-              >
-                この品物払い戻しできますか？ だめなら交換できますか？
-              </Text>
-              <Text
-                style={styles.koreanPronunce}
-                numberOfLines={3}
-                ellipsizeMode="tail"
-              >
-                코노 시나모노하라이모도시데키마스카? 다메나라 코오칸데키마스카?
-              </Text>
-            </View>
-            <TouchableOpacity style={styles.heartButton}>
-              <AntDesign name="heart" size={20} color="#FE9E98" />
-            </TouchableOpacity>
-          </Box>
-          <Box style={styles.vocabularyBox}>
-            <View style={styles.halfbox}>
-              <TouchableOpacity style={styles.playButton}>
-                <AntDesign name="playcircleo" size={28} color="#FE9E98" />
-              </TouchableOpacity>
-              <Text
-                style={styles.koreanText}
-                numberOfLines={3}
-                ellipsizeMode="tail"
-              >
-                택시 타는 곳은 어디인가요 ?
-              </Text>
-            </View>
-            <View style={styles.halfbox2}>
-              <Text
-                style={styles.japanesText}
-                numberOfLines={2}
-                ellipsizeMode="tail"
-              >
-                タクシー乗り場はどこですか？
-              </Text>
-              <Text
-                style={styles.koreanPronunce}
-                numberOfLines={3}
-                ellipsizeMode="tail"
-              >
-                타쿠시이노리바와 도코데스카?
-              </Text>
-            </View>
-            <TouchableOpacity style={styles.heartButton}>
-              <AntDesign name="hearto" size={20} color="#FE9E98" />
-            </TouchableOpacity>
-          </Box>
-          <Box style={styles.vocabularyBox}>
-            <View style={styles.halfbox}>
-              <TouchableOpacity style={styles.playButton}>
-                <AntDesign name="playcircleo" size={28} color="#FE9E98" />
-              </TouchableOpacity>
-              <Text
-                style={styles.koreanText}
-                numberOfLines={3}
-                ellipsizeMode="tail"
-              >
-                택시 타는 곳은 어디인가요 ?
-              </Text>
-            </View>
-            <View style={styles.halfbox2}>
-              <Text
-                style={styles.japanesText}
-                numberOfLines={2}
-                ellipsizeMode="tail"
-              >
-                タクシー乗り場はどこですか？
-              </Text>
-              <Text
-                style={styles.koreanPronunce}
-                numberOfLines={3}
-                ellipsizeMode="tail"
-              >
-                타쿠시이노리바와 도코데스카?
-              </Text>
-            </View>
-            <TouchableOpacity style={styles.heartButton}>
-              <AntDesign name="hearto" size={20} color="#FE9E98" />
-            </TouchableOpacity>
-          </Box>
+          <ListComponent />
+          <ListComponent />
+          <ListComponent />
+          <ListComponent />
+          <ListComponent />
         </View>
       </ScrollView>
     </View>
@@ -288,72 +138,5 @@ const styles = StyleSheet.create({
   },
   ResultElement: {
     marginTop: 20,
-  },
-  vocabularyBox: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginBottom: 20,
-    // paddingHorizontal: 10,
-    // padding: 2,
-    borderWidth: 1,
-    borderColor: "#FED2CF",
-    borderRadius: 15,
-    overflow: "hidden",
-    width: "100%",
-  },
-  playButton: {
-    marginLeft: 10,
-  },
-  halfbox: {
-    // flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    // justifyContent: "space-around",
-    width: "45%",
-    height: 120,
-    // paddingVertical: 28,
-    // paddingHorizontal: 12,
-    // borderRadius: 8,
-    backgroundColor: "#FFF2F2",
-  },
-  halfbox2: {
-    // flex: 1,
-    width: "45%",
-    maxWidth: "45%",
-    height: "60%",
-    maxHeight: "60%",
-    alignItems: "center",
-    justifyContent: "center",
-    // padding: 8,
-    margin: 4,
-  },
-  koreanText: {
-    // position: "absolute",
-    // left: 60,
-    marginLeft: "8%",
-    width: "60%",
-    maxWidth: "60%",
-    fontFamily: "suiteR",
-    flexWrap: "wrap",
-    textAlignVertical: "top",
-    textAlign: "center",
-  },
-  japanesText: {
-    padding: 4,
-    textAlign: "center",
-    fontFamily: "cha",
-    fontSize: 12,
-  },
-  koreanPronunce: {
-    padding: 4,
-    margin: 2,
-    fontFamily: "cha",
-    textAlign: "center",
-  },
-  heartButton: {
-    marginLeft: "auto",
-    position: "absolute",
-    top: 10,
-    right: 10,
   },
 });
