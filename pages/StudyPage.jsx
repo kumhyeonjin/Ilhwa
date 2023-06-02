@@ -1,9 +1,12 @@
 import React from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import { Box, ScrollView } from "native-base";
 import { LinearGradient } from "expo-linear-gradient";
 import { AntDesign } from "@expo/vector-icons";
-export default function StudyPage() {
+export default function StudyPage({ navigation }) {
+  const goLearningPage = () => {
+    navigation.navigate("LearningPage", {});
+  };
   return (
     <ScrollView>
       <Box safeAreaTop />
@@ -24,7 +27,7 @@ export default function StudyPage() {
           </View>
           <View style={styles.studyStageCon}>
             <View style={styles.row}>
-              <Box style={styles.stepBox}>
+              <Box style={styles.stepBox1}>
                 <LinearGradient
                   colors={["#FFBDB9", "#BBD0F5"]}
                   start={{ x: 0, y: 1 }}
@@ -44,7 +47,14 @@ export default function StudyPage() {
                 >
                   <Text style={styles.step}>2단계</Text>
                 </LinearGradient>
-                <AntDesign name="lock" size={22} color="#2C2C2C" />
+                <TouchableOpacity onPress={goLearningPage}>
+                  <AntDesign
+                    name="lock"
+                    size={22}
+                    color="#2C2C2C"
+                    padding={25}
+                  />
+                </TouchableOpacity>
               </Box>
             </View>
             <View style={styles.row}>
@@ -68,7 +78,14 @@ export default function StudyPage() {
                 >
                   <Text style={styles.step}>4단계</Text>
                 </LinearGradient>
-                <AntDesign name="lock" size={22} color="#2C2C2C" />
+                <TouchableOpacity onPress={goLearningPage}>
+                  <AntDesign
+                    name="lock"
+                    size={22}
+                    color="#2C2C2C"
+                    padding={25}
+                  />
+                </TouchableOpacity>
               </Box>
             </View>
             <View style={styles.row}>
@@ -81,7 +98,14 @@ export default function StudyPage() {
                 >
                   <Text style={styles.step}>5단계</Text>
                 </LinearGradient>
-                <AntDesign name="lock" size={22} color="#2C2C2C" />
+                <TouchableOpacity onPress={goLearningPage}>
+                  <AntDesign
+                    name="lock"
+                    size={22}
+                    color="#2C2C2C"
+                    padding={25}
+                  />
+                </TouchableOpacity>
               </Box>
               <Box style={styles.stepBox}>
                 <LinearGradient
@@ -92,7 +116,14 @@ export default function StudyPage() {
                 >
                   <Text style={styles.step}>6단계</Text>
                 </LinearGradient>
-                <AntDesign name="lock" size={22} color="#2C2C2C" />
+                <TouchableOpacity onPress={goLearningPage}>
+                  <AntDesign
+                    name="lock"
+                    size={22}
+                    color="#2C2C2C"
+                    padding={25}
+                  />
+                </TouchableOpacity>
               </Box>
             </View>
           </View>
@@ -140,6 +171,18 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginBottom: 10,
   },
+  stepBox1: {
+    padding: 12,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 0.8,
+    borderColor: "#656565",
+    width: "40%",
+    height: 100,
+    marginVertical: 15,
+    borderRadius: 5,
+    backgroundColor: "#fff",
+  },
   stepBox: {
     padding: 12,
     alignItems: "center",
@@ -150,6 +193,7 @@ const styles = StyleSheet.create({
     height: 100,
     marginVertical: 15,
     borderRadius: 5,
+    backgroundColor: "#F6F6F6",
   },
   stepback: {
     position: "absolute",

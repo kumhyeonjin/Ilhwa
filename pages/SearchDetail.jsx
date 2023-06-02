@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   StyleSheet,
   View,
@@ -15,13 +16,11 @@ import { Feather } from "@expo/vector-icons";
 import ListComponent from "../components/ListComponent";
 
 import datas from "../data.json";
-import { useState } from "react";
 
 export default function SearchDetail() {
-  // const dt = datas.datas;
+  const dt = datas.datas;
 
-  // const firterData = dt.filter((e) => e.category === '')
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
   return (
     <View style={styles.searchDetailAll}>
@@ -71,11 +70,204 @@ export default function SearchDetail() {
       </View>
       <ScrollView>
         <View style={styles.ResultElement}>
-          <ListComponent />
-          <ListComponent />
-          <ListComponent />
-          <ListComponent />
-          <ListComponent />
+          <Box style={styles.vocabularyBox}>
+            <View style={styles.halfbox}>
+              <TouchableOpacity style={styles.playButton}>
+                <AntDesign name="playcircleo" size={28} color="#FE9E98" />
+              </TouchableOpacity>
+              <Text
+                style={styles.koreanText}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                저것 좀 보여 주시겠습니까?
+              </Text>
+            </View>
+            <View style={styles.halfbox2}>
+              <Text
+                style={styles.japanesText}
+                numberOfLines={2}
+                ellipsizeMode="tail"
+              >
+                あれを 見せて いただけますか
+              </Text>
+              <Text
+                style={styles.koreanPronunce}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                아레오 미세떼 이따다께마스까.
+              </Text>
+            </View>
+            <TouchableOpacity style={styles.heartButton}>
+              <AntDesign size={20} color="#FE9E98" />
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.vocabularyBox}>
+            <View style={styles.halfbox}>
+              <TouchableOpacity style={styles.playButton}>
+                <AntDesign name="playcircleo" size={28} color="#FE9E98" />
+              </TouchableOpacity>
+              <Text
+                style={styles.koreanText}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                저것 좀 보여 주시겠습니까?
+              </Text>
+            </View>
+            <View style={styles.halfbox2}>
+              <Text
+                style={styles.japanesText}
+                numberOfLines={2}
+                ellipsizeMode="tail"
+              >
+                あれを 見せて いただけますか
+              </Text>
+              <Text
+                style={styles.koreanPronunce}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                아레오 미세떼 이따다께마스까.
+              </Text>
+            </View>
+            <TouchableOpacity style={styles.heartButton}>
+              <AntDesign size={20} color="#FE9E98" />
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.vocabularyBox}>
+            <View style={styles.halfbox}>
+              <TouchableOpacity style={styles.playButton}>
+                <AntDesign name="playcircleo" size={28} color="#FE9E98" />
+              </TouchableOpacity>
+              <Text
+                style={styles.koreanText}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                저것 좀 보여 주시겠습니까?
+              </Text>
+            </View>
+            <View style={styles.halfbox2}>
+              <Text
+                style={styles.japanesText}
+                numberOfLines={2}
+                ellipsizeMode="tail"
+              >
+                あれを 見せて いただけますか
+              </Text>
+              <Text
+                style={styles.koreanPronunce}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                아레오 미세떼 이따다께마스까.
+              </Text>
+            </View>
+            <TouchableOpacity style={styles.heartButton}>
+              <AntDesign size={20} color="#FE9E98" />
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.vocabularyBox}>
+            <View style={styles.halfbox}>
+              <TouchableOpacity style={styles.playButton}>
+                <AntDesign name="playcircleo" size={28} color="#FE9E98" />
+              </TouchableOpacity>
+              <Text
+                style={styles.koreanText}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                저것 좀 보여 주시겠습니까?
+              </Text>
+            </View>
+            <View style={styles.halfbox2}>
+              <Text
+                style={styles.japanesText}
+                numberOfLines={2}
+                ellipsizeMode="tail"
+              >
+                あれを 見せて いただけますか
+              </Text>
+              <Text
+                style={styles.koreanPronunce}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                아레오 미세떼 이따다께마스까.
+              </Text>
+            </View>
+            <TouchableOpacity style={styles.heartButton}>
+              <AntDesign size={20} color="#FE9E98" />
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.vocabularyBox}>
+            <View style={styles.halfbox}>
+              <TouchableOpacity style={styles.playButton}>
+                <AntDesign name="playcircleo" size={28} color="#FE9E98" />
+              </TouchableOpacity>
+              <Text
+                style={styles.koreanText}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                저것 좀 보여 주시겠습니까?
+              </Text>
+            </View>
+            <View style={styles.halfbox2}>
+              <Text
+                style={styles.japanesText}
+                numberOfLines={2}
+                ellipsizeMode="tail"
+              >
+                あれを 見せて いただけますか
+              </Text>
+              <Text
+                style={styles.koreanPronunce}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                아레오 미세떼 이따다께마스까.
+              </Text>
+            </View>
+            <TouchableOpacity style={styles.heartButton}>
+              <AntDesign size={20} color="#FE9E98" />
+            </TouchableOpacity>
+          </Box>
+          <Box style={styles.vocabularyBox}>
+            <View style={styles.halfbox}>
+              <TouchableOpacity style={styles.playButton}>
+                <AntDesign name="playcircleo" size={28} color="#FE9E98" />
+              </TouchableOpacity>
+              <Text
+                style={styles.koreanText}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                저것 좀 보여 주시겠습니까?
+              </Text>
+            </View>
+            <View style={styles.halfbox2}>
+              <Text
+                style={styles.japanesText}
+                numberOfLines={2}
+                ellipsizeMode="tail"
+              >
+                あれを 見せて いただけますか
+              </Text>
+              <Text
+                style={styles.koreanPronunce}
+                numberOfLines={3}
+                ellipsizeMode="tail"
+              >
+                아레오 미세떼 이따다께마스까.
+              </Text>
+            </View>
+            <TouchableOpacity style={styles.heartButton}>
+              <AntDesign size={20} color="#FE9E98" />
+            </TouchableOpacity>
+          </Box>
         </View>
       </ScrollView>
     </View>
@@ -85,6 +277,7 @@ const styles = StyleSheet.create({
   searchDetailAll: {
     flex: 1,
     paddingHorizontal: 16,
+    paddingVertical: 24,
     backgroundColor: "#fff",
   },
   searchCon: {
@@ -138,5 +331,72 @@ const styles = StyleSheet.create({
   },
   ResultElement: {
     marginTop: 20,
+  },
+  vocabularyBox: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 20,
+    // paddingHorizontal: 10,
+    // padding: 2,
+    borderWidth: 1,
+    borderColor: "#FF6A6A",
+    borderRadius: 15,
+    overflow: "hidden",
+    width: "100%",
+  },
+  playButton: {
+    marginLeft: 10,
+  },
+  halfbox: {
+    // flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    // justifyContent: "space-around",
+    width: "45%",
+    height: 120,
+    // paddingVertical: 28,
+    // paddingHorizontal: 12,
+    // borderRadius: 8,
+    backgroundColor: "#FFDEDE",
+  },
+  halfbox2: {
+    // flex: 1,
+    width: "45%",
+    maxWidth: "45%",
+    height: "60%",
+    maxHeight: "60%",
+    alignItems: "center",
+    justifyContent: "center",
+    // padding: 8,
+    margin: 4,
+  },
+  koreanText: {
+    // position: "absolute",
+    // left: 60,
+    marginLeft: "8%",
+    width: "60%",
+    maxWidth: "60%",
+    fontFamily: "suiteR",
+    flexWrap: "wrap",
+    textAlignVertical: "top",
+    textAlign: "center",
+  },
+  japanesText: {
+    padding: 4,
+    textAlign: "center",
+    fontFamily: "cha",
+    fontSize: 12,
+  },
+  koreanPronunce: {
+    padding: 4,
+    margin: 2,
+    fontFamily: "cha",
+    textAlign: "center",
+  },
+  heartButton: {
+    marginLeft: "auto",
+    position: "absolute",
+    top: 10,
+    right: 10,
   },
 });

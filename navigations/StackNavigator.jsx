@@ -11,6 +11,10 @@ import ShopDetail from "../pages/ShopDetail";
 import TrafficDetail from "../pages/TrafficDetail";
 import EatDetail from "../pages/EatDetail";
 import MyProfile from "../pages/MyProfile";
+import StudyPage from "../pages/StudyPage";
+import PutSentence from "../pages/PutSentence";
+import LearningPage from "../pages/LearningPage";
+import LearningPageSec from "../pages/LearningPageSec";
 import TabNavigator from "./TabNavigator";
 
 const Stack = createStackNavigator();
@@ -33,6 +37,10 @@ const StackNavigator = () => {
       <Stack.Screen name="TrafficDetail" component={TrafficDetail} />
       <Stack.Screen name="EatDetail" component={EatDetail} />
       <Stack.Screen name="MyProfile" component={MyProfile} />
+      <Stack.Screen name="StudyPage" component={StudyPage} />
+      <Stack.Screen name="PutSentence" component={PutSentence} />
+      <Stack.Screen name="LearningPage" component={LearningPage} />
+      <Stack.Screen name="LearningPageSec" component={LearningPageSec} />
       <Stack.Screen name="TabNavigator" component={TabNavigator} />
     </Stack.Navigator>
   );

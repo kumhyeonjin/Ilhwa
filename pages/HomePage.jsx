@@ -15,16 +15,16 @@ import ShopDetail from "../pages/ShopDetail";
 
 export default function HomePage({ navigation }) {
   const goRoomDetail = () => {
-    navigation.navigate("RoomDetail", {});
+    navigation.navigate("RoomDetail");
   };
   const goShopDetail = () => {
-    navigation.navigate("ShopDetail", {});
+    navigation.navigate("ShopDetail");
   };
   const goTrafficDetail = () => {
-    navigation.navigate("TrafficDetail", {});
+    navigation.navigate("TrafficDetail");
   };
   const goEatDetail = () => {
-    navigation.navigate("EatDetail", {});
+    navigation.navigate("EatDetail");
   };
 
   useEffect(() => {

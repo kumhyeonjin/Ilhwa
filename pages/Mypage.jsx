@@ -10,6 +10,17 @@ export default function MyPage({ navigation }) {
   const goMyProfile = () => {
     navigation.navigate("MyProfile", {});
   };
+
+  const goStudy = () => {
+    navigation.navigate("StudyPage", {});
+  };
+
+  const goPutSentence = () => {
+    navigation.navigate("PutSentence", {});
+  };
+  const goSignInPage = () => {
+    navigation.navigate("SignInPage", {});
+  };
   return (
     <View style={styles.mypageAll}>
       <Box safeAreaTop />
@@ -19,7 +30,6 @@ export default function MyPage({ navigation }) {
         end={{ x: 1, y: 0 }}
         style={{
           borderRadius: 10,
-
           overflow: "hidden",
         }}
       >
@@ -30,7 +40,7 @@ export default function MyPage({ navigation }) {
           />
           <View style={styles.myProfileText}>
             <Text style={styles.userName}>ooo 님</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={goSignInPage}>
               <Text style={styles.logout}>
                 로그아웃
                 <AntDesign name="right" size={12} color="black" />
@@ -48,7 +58,7 @@ export default function MyPage({ navigation }) {
         >
           <Text style={styles.studyBoxText}>매일 발전하는 일본어!</Text>
           <Text style={styles.studyBoxText}>일화와 함께 학습해보세요!</Text>
-          <TouchableOpacity style={styles.myProgress}>
+          <TouchableOpacity style={styles.myProgress} onPress={goStudy}>
             <Text style={styles.myProgressText}>학습 진도 확인하기</Text>
           </TouchableOpacity>
         </LinearGradient>
@@ -63,7 +73,7 @@ export default function MyPage({ navigation }) {
       <View style={styles.goStudy}>
         <View style={styles.studyContent1}>
           <Text style={styles.myText}>담은 문장</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={goPutSentence}>
             <AntDesign name="rightcircleo" size={24} color="#FFBFBB" />
           </TouchableOpacity>
         </View>
@@ -83,6 +93,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     // marginVertical: 16,
     backgroundColor: "#fff",
+    paddingVertical: 24,
   },
   myProfile: {
     flexDirection: "row",
