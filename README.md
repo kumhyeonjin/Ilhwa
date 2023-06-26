@@ -2,7 +2,7 @@
 
 - ### DEMO
 
-  <img src="https://github.com/kumhyeonjin/Ilhwa/assets/122090183/8c97321f-24cb-4dca-922c-d730ee337ef0" width="80%">
+  <img src="https://github.com/kumhyeonjin/Ilhwa/assets/122090183/8c97321f-24cb-4dca-922c-d730ee337ef0" width="100%">
   <br/>
   -실제 구현 화면
   <br/>
