@@ -7,7 +7,7 @@
   -실제 구현 화면
   <br/>
   <div width="100%"> 
-  <img src="https://github.com/kumhyeonjin/Ilhwa/assets/122090183/c4308030-5c71-4207-8ef1-7382e0fd1949" width="45%">
+  <img src="https://github.com/kumhyeonjin/Ilhwa/assets/122090183/c4308030-5c71-4207-8ef1-7382e0fd1949" width="45%" height="70%">
   <img src="https://github.com/kumhyeonjin/Ilhwa/assets/122090183/e2199452-391a-4f15-b685-e8c6dd4ea6bf" width="45%">
   <img src="https://github.com/kumhyeonjin/Ilhwa/assets/122090183/5a26eae3-8759-47fd-abe4-5846309e5275" width="45%">
   <img src="https://github.com/kumhyeonjin/Ilhwa/assets/122090183/4aa6d87d-a594-4494-8124-5dc601e4fb31" width="45%">
